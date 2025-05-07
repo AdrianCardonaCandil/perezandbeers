@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+/* Animations for the home page */
+/* Resizing animation for column template */
+@keyframes column-template-resize {
+  0% {
+    grid-template-columns: 1fr 2fr;
+    margin-right: 100px;
+  }
+  100% {
+    grid-template-columns: 2fr 1fr;
+    margin-right: 0px;
+  }
+}
+
+/* Scaling image animation */
+@keyframes scale-image {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
 @theme {
   /* Color Scheme */
   --primary-light: #36353e;
@@ -69,4 +92,18 @@
   --inverse-primary-dark: #5f5d67;
   --scrim-dark: #000000;
   --shadow-dark: #000000;
+}
+
+/* Layer to define animation classes used on the homepage */
+@layer homePage {
+  .column-template-resize {
+    animation: column-template-resize linear both;
+    animation-timeline: scroll(root);
+    animation-range: 150px 750px;
+  }
+  .scale-image {
+    animation: scale-image linear both;
+    animation-timeline: scroll(root);
+    animation-range: 150px 750px;
+  }
 }

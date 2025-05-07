@@ -24,11 +24,12 @@ const front = {
 const Home = () => {
   return (
     <main>
-      <section className="md:grid grid-cols-[500px_1fr] mr-25">
+      <section className="md:grid grid-cols-[500px_1fr] column-template-resize">
         <div>
             <Front logo={front.logo} message={front.message} label={front.label} />
+            <div className="h-1000"></div>
         </div>
-        <div className="sticky top-0 right-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 right-0 h-screen w-full overflow-hidden scale-image">
             <img className="h-full w-full object-cover" src={images[3].path} alt={images[3].alt} />
         </div>
       </section>
