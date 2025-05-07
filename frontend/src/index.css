@@ -108,14 +108,4 @@
     animation-timeline: scroll(root);
     animation-range: 150px 1000px;
   }
-<<<<<<< HEAD
-  @media (width >= 768px) {
-    .header-margin {
-      animation: header-margin linear both;
-      animation-timeline: scroll(root);
-      animation-range: 150px 1000px;
-    }
-  }
-=======
->>>>>>> main
 }

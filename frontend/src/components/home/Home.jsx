@@ -25,11 +25,7 @@ const Home = () => {
   return (
     <main>
       <section>
-<<<<<<< HEAD
-        <div className="column-template-resize header-margin flex grid-cols-[500px_1fr] flex-col-reverse md:grid">
-=======
         <div className="column-template-resize flex grid-cols-[500px_1fr] flex-col-reverse md:grid">
->>>>>>> main
           <div>
             <Front
               logo={front.logo}
