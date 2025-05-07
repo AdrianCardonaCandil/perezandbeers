@@ -1,5 +1,7 @@
 import Front from "./Front";
 import images from "../../assets/images/export";
+import { useEffect } from "react";
+import { useState } from "react";
 
 /**
  * @file Home.jsx
@@ -22,21 +24,48 @@ const front = {
 };
 
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+    const target = document.getElementById("test-section");
+    if (target) {
+      observer.observe(target);
+    }
+    return () => {
+      if (target) {
+        observer.unobserve(target);
+      }
+    };
+  }, []);
+
   return (
     <main>
       <section>
-        <div className="column-template-resize flex grid-cols-[500px_1fr] flex-col-reverse md:grid">
+        <div
+          className={`unexpanded-home-grid flex flex-col-reverse md:grid ${isVisible ? "expanded-home-grid" : ""}`}
+        >
           <div>
             <Front
               logo={front.logo}
               message={front.message}
               label={front.label}
             />
-            <section className="h-250"></section>
+            <section id="test-section" className="h-250"></section>
           </div>
           <div className="top-0 right-0 w-full overflow-hidden md:sticky md:h-screen">
             <img
-              className="scale-image origin-left reveal-hero-image h-full w-full object-cover"
+              className="reveal-hero-image h-full w-full object-cover"
               src={images[3].path}
               alt={images[3].alt}
             />
