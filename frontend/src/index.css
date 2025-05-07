@@ -5,9 +5,11 @@
 @keyframes column-template-resize {
   0% {
     grid-template-columns: 1fr 2fr;
+    margin-right: 100px;
   }
   100% {
     grid-template-columns: 2fr 1fr;
+    margin-right: 0px;
   }
 }
 
@@ -18,16 +20,6 @@
   }
   100% {
     transform: scale(1.25);
-  }
-}
-
-/* Margin animation for header */
-@keyframes header-margin {
-  0% {
-    margin-right: 100px;
-  }
-  100% {
-    margin-right: 0px;
   }
 }
 
@@ -104,21 +96,16 @@
 
 /* Layer to define animation classes used on the homepage */
 @layer homePage {
-  .column-template-resize {
-    animation: column-template-resize linear both;
-    animation-timeline: scroll(root);
-    animation-range: 150px 1000px;
+  @media (width >= 768px) {
+    .column-template-resize {
+      animation: column-template-resize linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0px 1000px;
+    }
   }
   .scale-image {
     animation: scale-image linear both;
     animation-timeline: scroll(root);
     animation-range: 150px 1000px;
-  }
-  @media (width >= 768px) {
-    .header-margin {
-      animation: header-margin linear both;
-      animation-timeline: scroll(root);
-      animation-range: 150px 1000px;
-    }
   }
 }

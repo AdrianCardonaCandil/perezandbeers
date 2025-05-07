@@ -15,7 +15,7 @@ import divider from "../../assets/divider.svg";
 const Front = ({ logo, message, label }) => {
   return (
     <section className="flex items-center justify-center md:h-screen md:min-h-150">
-      <div className="my-10 flex w-1/2 flex-col items-start gap-5 md:w-2/3 md:mt-50">
+      <div className="my-10 flex w-1/2 flex-col items-start gap-5 md:mt-50 md:w-2/3">
         <h1
           className="text-5xl font-extrabold"
           style={{ fontFamily: "'Dancing Script'" }}
