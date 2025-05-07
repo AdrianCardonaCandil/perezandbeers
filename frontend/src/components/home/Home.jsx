@@ -1,10 +1,11 @@
+import Front from "./Front";
+import images from "../../assets/images/export"
+
 /**
  * @file Home.jsx
  * @description Defines the home page of the web site.
  * @author Adrian Cardona Candil
  */
-
-import Front from "./Front";
 
 /**
  * @function Home
@@ -23,8 +24,13 @@ const front = {
 const Home = () => {
   return (
     <main>
-      <section>
-        <Front logo={front.logo} message={front.message} label={front.label} />
+      <section className="md:grid grid-cols-[500px_1fr] mr-25">
+        <div>
+            <Front logo={front.logo} message={front.message} label={front.label} />
+        </div>
+        <div className="sticky top-0 right-0 h-screen w-full overflow-hidden">
+            <img className="h-full w-full object-cover" src={images[3].path} alt={images[3].alt} />
+        </div>
       </section>
     </main>
   );
