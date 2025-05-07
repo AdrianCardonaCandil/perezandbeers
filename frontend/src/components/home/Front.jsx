@@ -28,7 +28,7 @@ const Front = ({ logo, message, label }) => {
           src={divider}
           alt="section divider"
         ></img>
-        <button className="front-fade-in p-1.5 text-sm text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
+        <button className="front-fade-in px-7.5 py-2 text-sm text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
           {label}
         </button>
       </div>

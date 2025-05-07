@@ -7,6 +7,7 @@
 import Front from "./Front"
 import { useEffect, useState } from "react";
 import images from "../../assets/images/export";
+import Menu from "./Menu";
 
 // Mock information for the Front component
 const front = {
@@ -14,7 +15,17 @@ const front = {
     message:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum viverra odio eget egestas.",
     label: "Reserve your table",
-};
+}
+
+// Mock information for the Menu component
+const menu = {
+    sectionName: "Lorem ipsum",
+    information: {
+        title: "Lorem ipsum",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum viverra odio eget egestas.",
+    },
+    sectionButton: "Lorem ipsum dolor sit amet"
+}
 
 /**
  * @function HomeGrid
@@ -53,7 +64,7 @@ const HomeGrid = () => {
             <div>
                 <Front logo={front.logo} message={front.message} label={front.label}  />
                 <div id="main-sections">
-                    
+                    <Menu sectionName={menu.sectionName} information={menu.information} sectionButton={menu.sectionButton} />
                 </div>
             </div>
             <div className="top-0 right-0 w-full overflow-hidden md:sticky md:h-screen">

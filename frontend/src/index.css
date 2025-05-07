@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 /* Animations for the home page */
-
 /* Fade in animation for the front content */
 @keyframes front-fade-in {
   0% {
