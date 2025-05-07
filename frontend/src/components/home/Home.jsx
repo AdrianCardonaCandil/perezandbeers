@@ -32,11 +32,11 @@ const Home = () => {
               message={front.message}
               label={front.label}
             />
-            <section className="h-1000"></section>
+            <section className="h-250"></section>
           </div>
           <div className="top-0 right-0 w-full overflow-hidden md:sticky md:h-screen">
             <img
-              className="scale-image h-full w-full object-cover"
+              className="scale-image origin-left reveal-hero-image h-full w-full object-cover"
               src={images[3].path}
               alt={images[3].alt}
             />

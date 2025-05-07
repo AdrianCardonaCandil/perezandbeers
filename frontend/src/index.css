@@ -4,11 +4,11 @@
 /* Resizing animation for column template */
 @keyframes column-template-resize {
   0% {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     margin-right: 100px;
   }
   100% {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     margin-right: 0px;
   }
 }
@@ -20,6 +20,36 @@
   }
   100% {
     transform: scale(1.25);
+  }
+}
+
+/* Fade in animation for the front content */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade out animation for the front content */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hero image reveal animation */
+@keyframes reveal-hero-image {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -100,12 +130,23 @@
     .column-template-resize {
       animation: column-template-resize linear both;
       animation-timeline: scroll(root);
-      animation-range: 0px 1000px;
+      animation-range: 0px 750px;
     }
   }
   .scale-image {
     animation: scale-image linear both;
     animation-timeline: scroll(root);
-    animation-range: 150px 1000px;
+    animation-range: 150px 750px;
+  }
+  .fade-in {
+    animation: fade-in 1.3s ease-in both;
+  }
+  .fade-out {
+    animation: fade-out linear both;
+    animation-timeline: scroll(root);
+    animation-range: 150px 350px;
+  }
+  .reveal-hero-image {
+    animation: reveal-hero-image 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
   }
 }
