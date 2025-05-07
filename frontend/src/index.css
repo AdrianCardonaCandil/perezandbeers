@@ -31,6 +31,16 @@
   }
 }
 
+/* Menu marquee scroll animation */
+@keyframes menu-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @theme {
   /* Color Scheme */
   --primary-light: #36353e;
@@ -125,5 +135,11 @@
   }
   .reveal-hero-image {
     animation: reveal-hero-image 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+  .menu-scroll-left {
+    animation: menu-scroll 30s linear infinite;
+  }
+  .menu-scroll-right {
+    animation: menu-scroll 30s linear infinite reverse;
   }
 }
