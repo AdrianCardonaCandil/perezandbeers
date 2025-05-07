@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/common/Header";
+import routes from "./routes/routes";
 
 /**
  * @file src/App.jsx
@@ -19,8 +20,17 @@ const location = "C. Obispo Codina, 6, 35001 Las Palmas de Gran Canaria";
  */
 const Layout = () => {
   return (
-    <div className="min-h-screen font-['Raleway']">
+    <div className="min-h-screen font-['Raleway'] bg-[var(--surface-light)] dark:bg-[var(--surface-dark)] text-[var(--on-surface-light)] dark:text-[var(--on-surface-dark)]">
       <Header label={menuLabel} location={location} />
+      <Routes>
+        {routes.map(route => 
+          <Route
+            key={route.name}
+            path={route.path}
+            element={route.element}
+          />
+        )}
+      </Routes>
     </div>
   );
 };
