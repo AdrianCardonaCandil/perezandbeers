@@ -19,7 +19,7 @@ const location = "C. Obispo Codina, 6, 35001 Las Palmas de Gran Canaria";
  */
 const Layout = () => {
   return (
-    <div>
+    <div className="min-h-screen font-['Raleway']">
       <Header label={menuLabel} location={location} />
     </div>
   );
