@@ -7,6 +7,10 @@ import Header from "./components/common/Header";
  * @author Adrian Cardona Candil
  */
 
+// Mock data for the header component
+const menuLabel = "menu";
+const location = "C. Obispo Codina, 6, 35001 Las Palmas de Gran Canaria";
+
 /**
  * @function Layout
  * @description Application layout component. Defines the scaffold of the application placing header,
@@ -16,10 +20,10 @@ import Header from "./components/common/Header";
 const Layout = () => {
   return (
     <div>
-      <Header />
+      <Header label={menuLabel} location={location} />
     </div>
-  )
-}
+  );
+};
 
 /**
  * @function App
