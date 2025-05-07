@@ -7,11 +7,11 @@ import Home from "../components/home/Home";
  */
 
 const routes = [
-    {
-        name: "Home",
-        path: "/",
-        element: <Home />,
-    }
-]
+  {
+    name: "Home",
+    path: "/",
+    element: <Home />,
+  },
+];
 
 export default routes;
