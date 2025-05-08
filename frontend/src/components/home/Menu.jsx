@@ -4,7 +4,6 @@
  * @author Adrian Cardona Candil
  */
 
-import divider from "../../assets/divider.svg";
 import images from "../../assets/images/export";
 import SectionHeader from "./SectionHeader";
 

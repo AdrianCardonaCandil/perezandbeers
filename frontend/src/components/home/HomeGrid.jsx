@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import images from "../../assets/images/export";
 import Menu from "./Menu";
 import Catalog from "./Catalog";
+import Events from "./Events";
 
 // Mock information for the Front component
 const front = {
@@ -91,6 +92,18 @@ const catalog = {
   ],
 };
 
+// Mock information for the events section
+const events = {
+  sectionName: "Lorem ipsum",
+  information: {
+    title: "Lorem ipsum",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+        sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+        imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+  },
+  sectionButton: "Lorem ipsum dolor sit amet",
+};
+
 /**
  * @function HomeGrid
  * @description HomeGrid component. Renders the grid layout of the home page.
@@ -127,7 +140,7 @@ const HomeGrid = () => {
     <section
       className={`unexpanded-home-grid flex flex-col-reverse md:grid ${expanded ? "expanded-home-grid" : ""}`}
     >
-      <div>
+      <div className="min-w-0">
         <Front logo={front.logo} message={front.message} label={front.label} />
         <div id="main-sections">
           <Menu
@@ -140,6 +153,11 @@ const HomeGrid = () => {
             information={catalog.information}
             categories={catalog.categories}
             sectionButton={catalog.sectionButton}
+          />
+          <Events
+            sectionName={events.sectionName}
+            information={events.information}
+            sectionButton={events.sectionButton}
           />
         </div>
       </div>
