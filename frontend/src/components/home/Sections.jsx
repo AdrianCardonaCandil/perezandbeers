@@ -16,7 +16,7 @@ import Events from "./Events";
 
 const Sections = ({ menu, catalog, events }) => {
     return (
-        <div id="main-sections sticky top-0">
+        <div id="main-sections">
             <Menu
                 sectionName={menu.sectionName}
                 information={menu.information}

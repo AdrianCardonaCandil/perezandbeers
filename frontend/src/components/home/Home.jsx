@@ -128,7 +128,10 @@ const useIntersectionExpand = (targetId, threshold = 0.01) => {
             { threshold: threshold },
         );
         const target = document.getElementById(targetId);
-        if (target) observer.observe(target);
+        if (target) {
+            console.log("Target found");
+            observer.observe(target);
+        }
 
         return () => {
             if (target) observer.unobserve(target);
