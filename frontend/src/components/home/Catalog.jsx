@@ -19,14 +19,14 @@ const Beer = ({ name, description, brand, alcoholContent, country }) => {
     <article className="flex flex-col gap-5">
       <h3
         style={{ fontFamily: "'Dancing Script'" }}
-        className="text-2xl font-bold"
+        className="text-2xl font-bold catalog-fade-in"
       >
         {name}
       </h3>
-      <p className="leading-8 font-light">{description}</p>
+      <p className="leading-8 font-light catalog-fade-in">{description}</p>
       <div className="flex justify-between font-thin">
-        <p>{brand}</p>
-        <div className="flex items-center gap-5 text-xs">
+        <p className="catalog-fade-in">{brand}</p>
+        <div className="flex items-center gap-5 text-xs catalog-fade-in">
           <p>{alcoholContent}</p>|<p>{country}</p>
         </div>
       </div>
@@ -43,15 +43,20 @@ const Beer = ({ name, description, brand, alcoholContent, country }) => {
 
 const Recommendations = ({ categories }) => {
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const handleCategoryChange = (index) => {
+    setSelectedCategory(index);
+  };
   return (
     <div className="flex flex-col gap-10 px-10 md:px-15">
       <nav className="flex justify-evenly border-b-1 border-[var(--primary-light)] pb-2 dark:border-[var(--primary-dark)]">
         {categories.map((category) => (
-          <p className="text-xs font-thin md:text-sm">{category.name}</p>
+            <button onClick={() => handleCategoryChange(category.id)} className="text-xs font-thin md:text-sm hover:scale-110 hover:text-[var(--primary-light)] dark:hover:text-[var(--primary-dark)] transition duration-300">
+                {category.name}
+            </button>
         ))}
       </nav>
       <div>
-        <p className="leading-8 font-light">
+        <p className="leading-8 font-light catalog-fade-in">
           {categories[selectedCategory].description}
         </p>
       </div>

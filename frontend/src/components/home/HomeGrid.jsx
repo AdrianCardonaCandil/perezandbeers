@@ -111,7 +111,7 @@ const HomeGrid = () => {
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.01 },
     );
     const target = document.getElementById("main-sections");
     if (target) {

@@ -41,8 +41,8 @@
   }
 }
 
-/* Menu content fade-in animation */
-@keyframes menu-fade-in {
+/* Content fade-in animation */
+@keyframes content-fade-in {
   0% {
     opacity: 0;
     transform: translateX(5%);
@@ -155,7 +155,13 @@
     animation: menu-scroll 30s linear infinite reverse;
   }
   .menu-fade-in {
-    animation: menu-fade-in linear both;
+    animation: content-fade-in linear both;
+    animation-timeline: view();
+    animation-range: cover 25% contain 35%;
+    view-timeline-inset: 30%;
+  }
+  .catalog-fade-in {
+    animation: content-fade-in linear both;
     animation-timeline: view();
     animation-range: cover 25% contain 35%;
     view-timeline-inset: 30%;
