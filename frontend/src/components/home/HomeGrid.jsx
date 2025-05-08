@@ -111,31 +111,31 @@ const events = {
  */
 
 const HomeGrid = () => {
-  // Logic to handle the expanded state of the grid
   const [expanded, setExpanded] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const { top } = entry.boundingClientRect;
           if (entry.isIntersecting) {
             setExpanded(true);
           } else {
-            setExpanded(false);
+            if (top > 0) {
+              setExpanded(false);
+            }
           }
         });
       },
       { threshold: 0.01 },
     );
     const target = document.getElementById("main-sections");
-    if (target) {
-      observer.observe(target);
-    }
+    if (target) observer.observe(target);
+
     return () => {
-      if (target) {
-        observer.unobserve(target);
-      }
+      if (target) observer.unobserve(target);
     };
   }, []);
+
   return (
     <section
       className={`unexpanded-home-grid flex flex-col-reverse md:grid ${expanded ? "expanded-home-grid" : ""}`}
@@ -160,6 +160,7 @@ const HomeGrid = () => {
             sectionButton={events.sectionButton}
           />
         </div>
+        <section className="h-300"></section>
       </div>
       <div className="top-0 right-0 w-full overflow-hidden md:sticky md:h-screen">
         <img
