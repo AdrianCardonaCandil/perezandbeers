@@ -16,7 +16,7 @@ const SectionHeader = ({ sectionName, information }) => {
   return (
     <div className="mb-15">
       <div className="menu-fade-in p-12.5">
-        <button className="px-7.5 py-2 text-sm font-bold inset-ring-2 inset-ring-[var(--primary-light)] dark:inset-ring-[var(--primary-dark)]">
+        <button className="px-7.5 py-2 text-sm font-bold text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
           {sectionName}
         </button>
       </div>

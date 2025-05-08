@@ -84,7 +84,7 @@ const Menu = ({ sectionName, information, sectionButton }) => {
         <ToLeftMarquee />
         <ToRightMarquee />
       </div>
-      <div className="mt-20 grid place-content-center bg-[var(--surface-container-light)] py-12.5 text-[var(--on-primary-container-light)] underline underline-offset-5 transition-all duration-1000 hover:bg-[var(--primary-container-light)] md:py-17.5 dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-primary-container-dark)] hover:dark:bg-[var(--primary-container-dark)]">
+      <div className="mt-20 grid place-content-center bg-[var(--surface-container-light)] py-12.5 text-[var(--on-tertiary-container-light)] underline underline-offset-5 transition-all duration-1000 hover:bg-[var(--tertiary-container-light)] md:py-17.5 dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-tertiary-container-dark)] hover:dark:bg-[var(--tertiary-container-dark)]">
         <button>{sectionButton}</button>
       </div>
     </section>

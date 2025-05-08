@@ -19,14 +19,14 @@ const Beer = ({ name, description, brand, alcoholContent, country }) => {
     <article className="flex flex-col gap-5">
       <h3
         style={{ fontFamily: "'Dancing Script'" }}
-        className="text-2xl font-bold catalog-fade-in"
+        className="catalog-fade-in text-2xl font-bold"
       >
         {name}
       </h3>
-      <p className="leading-8 font-light catalog-fade-in">{description}</p>
+      <p className="catalog-fade-in leading-8 font-light">{description}</p>
       <div className="flex justify-between font-thin">
         <p className="catalog-fade-in">{brand}</p>
-        <div className="flex items-center gap-5 text-xs catalog-fade-in">
+        <div className="catalog-fade-in flex items-center gap-5 text-xs">
           <p>{alcoholContent}</p>|<p>{country}</p>
         </div>
       </div>
@@ -50,13 +50,16 @@ const Recommendations = ({ categories }) => {
     <div className="flex flex-col gap-10 px-10 md:px-15">
       <nav className="flex justify-evenly border-b-1 border-[var(--primary-light)] pb-2 dark:border-[var(--primary-dark)]">
         {categories.map((category) => (
-            <button onClick={() => handleCategoryChange(category.id)} className="text-xs font-thin md:text-sm hover:scale-110 hover:text-[var(--primary-light)] dark:hover:text-[var(--primary-dark)] transition duration-300">
-                {category.name}
-            </button>
+          <button
+            onClick={() => handleCategoryChange(category.id)}
+            className="text-xs font-thin transition duration-300 hover:scale-110 hover:text-[var(--primary-light)] md:text-sm dark:hover:text-[var(--primary-dark)]"
+          >
+            {category.name}
+          </button>
         ))}
       </nav>
       <div>
-        <p className="leading-8 font-light catalog-fade-in">
+        <p className="catalog-fade-in leading-8 font-light">
           {categories[selectedCategory].description}
         </p>
       </div>
@@ -96,7 +99,7 @@ const Catalog = ({ sectionName, information, categories, sectionButton }) => {
     <section className="mt-15 flex min-h-screen flex-col justify-between">
       <SectionHeader sectionName={sectionName} information={information} />
       <Recommendations categories={categories} />
-      <div className="mt-20 grid place-content-center bg-[var(--surface-container-light)] py-12.5 text-[var(--on-primary-container-light)] underline underline-offset-5 transition-all duration-1000 hover:bg-[var(--primary-container-light)] md:py-17.5 dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-primary-container-dark)] hover:dark:bg-[var(--primary-container-dark)]">
+      <div className="mt-20 grid place-content-center bg-[var(--surface-container-light)] py-12.5 text-[var(--on-tertiary-container-light)] underline underline-offset-5 transition-all duration-1000 hover:bg-[var(--tertiary-container-light)] md:py-17.5 dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-tertiary-container-dark)] hover:dark:bg-[var(--tertiary-container-dark)]">
         <button>{sectionButton}</button>
       </div>
     </section>
