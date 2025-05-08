@@ -19,16 +19,20 @@ const location = "C. Obispo Codina, 6, 35001 Las Palmas de Gran Canaria";
  * @returns {JSX.Element} Layout component.
  */
 const Layout = () => {
-  return (
-    <div className="min-h-screen bg-[var(--surface-light)] font-['Raleway'] text-[var(--on-surface-light)] dark:bg-[var(--surface-dark)] dark:text-[var(--on-surface-dark)]">
-      <Header label={menuLabel} location={location} />
-      <Routes>
-        {routes.map((route) => (
-          <Route key={route.name} path={route.path} element={route.element} />
-        ))}
-      </Routes>
-    </div>
-  );
+    return (
+        <div className="min-h-screen bg-[var(--surface-light)] font-['Raleway'] text-[var(--on-surface-light)] dark:bg-[var(--surface-dark)] dark:text-[var(--on-surface-dark)]">
+            <Header label={menuLabel} location={location} />
+            <Routes>
+                {routes.map((route) => (
+                    <Route
+                        key={route.name}
+                        path={route.path}
+                        element={route.element}
+                    />
+                ))}
+            </Routes>
+        </div>
+    );
 };
 
 /**
@@ -37,11 +41,11 @@ const Layout = () => {
  * @returns {JSX.Element} App main component.
  */
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Layout />
+        </BrowserRouter>
+    );
 };
 
 export default App;

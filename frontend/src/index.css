@@ -3,167 +3,168 @@
 /* Animations for the home page */
 /* Fade in animation for the front content */
 @keyframes front-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Fade out animation for the front content */
 @keyframes front-fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Hero image reveal animation */
 @keyframes reveal-hero-image {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 /* Menu marquee scroll animation */
 @keyframes menu-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Content fade-in animation */
 @keyframes content-fade-in {
-  0% {
-    opacity: 0;
-    transform: translateX(5%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @theme {
-  /* Color Scheme */
-  --primary-light: #515b92;
-  --on-primary-light: #ffffff;
-  --secondary-light: #595992;
-  --on-secondary-light: #ffffff;
-  --tertiary-light: #904b3c;
-  --on-tertiary-light: #ffffff;
-  --error-light: #ba1a1a;
-  --on-error-light: #ffffff;
-  --primary-container-light: #dee0ff;
-  --on-primary-container-light: #394379;
-  --secondary-container-light: #e2dfff;
-  --on-secondary-container-light: #414178;
-  --tertiary-container-light: #ffdad3;
-  --on-tertiary-container-light: #733426;
-  --error-container-light: #ffdad6;
-  --on-error-container-light: #93000a;
-  --surface-dim-light: #e6d7cd;
-  --surface-light: #fff8f5;
-  --surface-bright-light: #fff8f5;
-  --surface-container-lowest-light: #ffffff;
-  --surface-container-low-light: #fff1e8;
-  --surface-container-light: #fbebe0;
-  --surface-container-high-light: #f5e5db;
-  --surface-container-highest-light: #efe0d5;
-  --on-surface-light: #221a14;
-  --on-surface-variant-light: #46464f;
-  --outline-light: #767680;
-  --outline-variant-light: #c6c5d0;
-  --inverse-surface-light: #372f28;
-  --inverse-on-surface-light: #fdeee3;
-  --inverse-primary-light: #bac3ff;
-  --scrim-light: #000000;
-  --shadow-light: #000000;
+    /* Color Scheme */
+    --primary-light: #515b92;
+    --on-primary-light: #ffffff;
+    --secondary-light: #595992;
+    --on-secondary-light: #ffffff;
+    --tertiary-light: #904b3c;
+    --on-tertiary-light: #ffffff;
+    --error-light: #ba1a1a;
+    --on-error-light: #ffffff;
+    --primary-container-light: #dee0ff;
+    --on-primary-container-light: #394379;
+    --secondary-container-light: #e2dfff;
+    --on-secondary-container-light: #414178;
+    --tertiary-container-light: #ffdad3;
+    --on-tertiary-container-light: #733426;
+    --error-container-light: #ffdad6;
+    --on-error-container-light: #93000a;
+    --surface-dim-light: #e6d7cd;
+    --surface-light: #fff8f5;
+    --surface-bright-light: #fff8f5;
+    --surface-container-lowest-light: #ffffff;
+    --surface-container-low-light: #fff1e8;
+    --surface-container-light: #fbebe0;
+    --surface-container-high-light: #f5e5db;
+    --surface-container-highest-light: #efe0d5;
+    --on-surface-light: #221a14;
+    --on-surface-variant-light: #46464f;
+    --outline-light: #767680;
+    --outline-variant-light: #c6c5d0;
+    --inverse-surface-light: #372f28;
+    --inverse-on-surface-light: #fdeee3;
+    --inverse-primary-light: #bac3ff;
+    --scrim-light: #000000;
+    --shadow-light: #000000;
 
-  --primary-dark: #bac3ff;
-  --on-primary-dark: #222c61;
-  --secondary-dark: #c2c1ff;
-  --on-secondary-dark: #2a2a60;
-  --tertiary-dark: #ffb4a4;
-  --on-tertiary-dark: #561f13;
-  --error-dark: #ffb4ab;
-  --on-error-dark: #690005;
-  --primary-container-dark: #394379;
-  --on-primary-container-dark: #dee0ff;
-  --secondary-container-dark: #414178;
-  --on-secondary-container-dark: #e2dfff;
-  --tertiary-container-dark: #733426;
-  --on-tertiary-container-dark: #ffdad3;
-  --error-container-dark: #93000a;
-  --on-error-container-dark: #ffdad6;
-  --surface-dim-dark: #19120c;
-  --surface-dark: #19120c;
-  --surface-bright-dark: #403730;
-  --surface-container-lowest-dark: #130d07;
-  --surface-container-low-dark: #221a14;
-  --surface-container-dark: #261e18;
-  --surface-container-high-dark: #312822;
-  --surface-container-highest-dark: #3c332c;
-  --on-surface-dark: #efe0d5;
-  --on-surface-variant-dark: #c6c5d0;
-  --outline-dark: #90909a;
-  --outline-variant-dark: #46464f;
-  --inverse-surface-dark: #efe0d5;
-  --inverse-on-surface-dark: #372f28;
-  --inverse-primary-dark: #515b92;
-  --scrim-dark: #000000;
-  --shadow-dark: #000000;
+    --primary-dark: #bac3ff;
+    --on-primary-dark: #222c61;
+    --secondary-dark: #c2c1ff;
+    --on-secondary-dark: #2a2a60;
+    --tertiary-dark: #ffb4a4;
+    --on-tertiary-dark: #561f13;
+    --error-dark: #ffb4ab;
+    --on-error-dark: #690005;
+    --primary-container-dark: #394379;
+    --on-primary-container-dark: #dee0ff;
+    --secondary-container-dark: #414178;
+    --on-secondary-container-dark: #e2dfff;
+    --tertiary-container-dark: #733426;
+    --on-tertiary-container-dark: #ffdad3;
+    --error-container-dark: #93000a;
+    --on-error-container-dark: #ffdad6;
+    --surface-dim-dark: #19120c;
+    --surface-dark: #19120c;
+    --surface-bright-dark: #403730;
+    --surface-container-lowest-dark: #130d07;
+    --surface-container-low-dark: #221a14;
+    --surface-container-dark: #261e18;
+    --surface-container-high-dark: #312822;
+    --surface-container-highest-dark: #3c332c;
+    --on-surface-dark: #efe0d5;
+    --on-surface-variant-dark: #c6c5d0;
+    --outline-dark: #90909a;
+    --outline-variant-dark: #46464f;
+    --inverse-surface-dark: #efe0d5;
+    --inverse-on-surface-dark: #372f28;
+    --inverse-primary-dark: #515b92;
+    --scrim-dark: #000000;
+    --shadow-dark: #000000;
 }
 
 /* Layer to define utility classes used on the homepage */
 @layer homePage {
-  @media (width >= 768px) {
-    .unexpanded-home-grid {
-      grid-template-columns: 2fr 3fr;
-      margin-right: 100px;
-      transition: all 1.3s ease;
+    @media (width >= 768px) {
+        .unexpanded-home-grid {
+            grid-template-columns: 2fr 3fr;
+            margin-right: 100px;
+            transition: all 1.3s ease;
+        }
+        .expanded-home-grid {
+            grid-template-columns: 2fr 1fr;
+            margin-right: 0px;
+        }
     }
-    .expanded-home-grid {
-      grid-template-columns: 2fr 1fr;
-      margin-right: 0px;
+    .front-fade-in {
+        animation: front-fade-in 1.3s ease-in both;
     }
-  }
-  .front-fade-in {
-    animation: front-fade-in 1.3s ease-in both;
-  }
-  .front-fade-out {
-    animation: front-fade-out linear both;
-    animation-timeline: scroll(root);
-    animation-range: 150px 450px;
-  }
-  .reveal-hero-image {
-    animation: reveal-hero-image 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-  }
-  .menu-scroll-left {
-    animation: menu-scroll 30s linear infinite;
-  }
-  .menu-scroll-right {
-    animation: menu-scroll 30s linear infinite reverse;
-  }
-  .menu-fade-in {
-    animation: content-fade-in linear both;
-    animation-timeline: view();
-    animation-range: cover 25% contain 35%;
-    view-timeline-inset: 30%;
-  }
-  .catalog-fade-in {
-    animation: content-fade-in linear both;
-    animation-timeline: view();
-    animation-range: cover 25% contain 35%;
-    view-timeline-inset: 30%;
-  }
+    .front-fade-out {
+        animation: front-fade-out linear both;
+        animation-timeline: scroll(root);
+        animation-range: 150px 450px;
+    }
+    .reveal-hero-image {
+        animation: reveal-hero-image 1.3s cubic-bezier(0.65, 0, 0.35, 1)
+            forwards;
+    }
+    .menu-scroll-left {
+        animation: menu-scroll 30s linear infinite;
+    }
+    .menu-scroll-right {
+        animation: menu-scroll 30s linear infinite reverse;
+    }
+    .menu-fade-in {
+        animation: content-fade-in linear both;
+        animation-timeline: view();
+        animation-range: cover 25% contain 35%;
+        view-timeline-inset: 30%;
+    }
+    .catalog-fade-in {
+        animation: content-fade-in linear both;
+        animation-timeline: view();
+        animation-range: cover 25% contain 35%;
+        view-timeline-inset: 30%;
+    }
 }
