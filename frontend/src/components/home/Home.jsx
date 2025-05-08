@@ -175,6 +175,7 @@ const Home = () => {
                         label={front.label}
                     />
                     <Sections menu={menu} catalog={catalog} events={events} />
+                    <div className="h-300 sticky top-0 z-10 bg-[var(--surface-light)] dark:bg-[var(--surface-dark)] w-screen"></div>
                 </div>
                 <Hero expanded={expanded} />
             </section>
