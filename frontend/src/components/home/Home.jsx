@@ -130,8 +130,8 @@ const about = {
         {
             days: "Lorem - Ipsum",
             hours: "10:00 - 22:00",
-        }
-    ]
+        },
+    ],
 };
 
 /**
@@ -204,7 +204,12 @@ const Home = () => {
                         message={front.message}
                         label={front.label}
                     />
-                    <Sections menu={menu} catalog={catalog} events={events} about={about} />
+                    <Sections
+                        menu={menu}
+                        catalog={catalog}
+                        events={events}
+                        about={about}
+                    />
                 </div>
                 <Hero expanded={expanded} />
             </section>
