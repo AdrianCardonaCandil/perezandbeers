@@ -14,8 +14,8 @@ import { HiBars2 } from "react-icons/hi2";
 
 const Header = ({ label, location }) => {
     return (
-        <header className="fixed top-0 right-0 z-999 flex flex-col items-center justify-around gap-2.5 p-5 md:h-full md:p-7.5">
-            <div className="flex flex-col items-center">
+        <header className="fixed top-0 right-0 z-500 flex flex-col items-center justify-around gap-2.5 p-5 md:h-full md:p-7.5">
+            <div className="flex flex-col items-center hover:text-[var(--tertiary-light)] dark:hover:text-[var(--tertiary-dark)] transition duration-600">
                 <label className="text-xs font-light" htmlFor="menu-button">
                     {label}
                 </label>
