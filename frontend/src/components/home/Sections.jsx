@@ -7,6 +7,7 @@
 import Menu from "./Menu";
 import Catalog from "./Catalog";
 import Events from "./Events";
+import About from "./About";
 
 /**
  * @function Sections
@@ -14,25 +15,28 @@ import Events from "./Events";
  * @returns {JSX.Element} The sections component.
  */
 
-const Sections = ({ menu, catalog, events }) => {
+const Sections = ({ menu, catalog, events, about }) => {
     return (
-        <div id="main-sections">
-            <Menu
-                sectionName={menu.sectionName}
-                information={menu.information}
-                sectionButton={menu.sectionButton}
-            />
-            <Catalog
-                sectionName={catalog.sectionName}
-                information={catalog.information}
-                categories={catalog.categories}
-                sectionButton={catalog.sectionButton}
-            />
-            <Events
-                sectionName={events.sectionName}
-                information={events.information}
-                sectionButton={events.sectionButton}
-            />
+        <div>
+            <div id="main-sections">
+                <Menu
+                    sectionName={menu.sectionName}
+                    information={menu.information}
+                    sectionButton={menu.sectionButton}
+                />
+                <Catalog
+                    sectionName={catalog.sectionName}
+                    information={catalog.information}
+                    categories={catalog.categories}
+                    sectionButton={catalog.sectionButton}
+                />
+                <Events
+                    sectionName={events.sectionName}
+                    information={events.information}
+                    sectionButton={events.sectionButton}
+                />
+            </div>
+            <About logo={about.logo} information={about.information} timetable={about.timetable} />
         </div>
     );
 };

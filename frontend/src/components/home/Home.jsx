@@ -103,6 +103,18 @@ const events = {
     sectionButton: "Lorem ipsum dolor sit amet",
 };
 
+// Mock information for the About section
+const about = {
+    logo: "Lorem ipsum",
+    information: {
+        title: "Lorem ipsum",
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+          sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+          imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+    },
+    timetable: ""
+};
+
 /**
  * @function useIntersectionExpand
  * @description Custom hook that uses the Intersection Observer API to detect when an element is in the viewport.
@@ -177,8 +189,7 @@ const Home = () => {
                         message={front.message}
                         label={front.label}
                     />
-                    <Sections menu={menu} catalog={catalog} events={events} />
-                    <div className="h-300 sticky top-0 z-10 bg-[var(--surface-light)] dark:bg-[var(--surface-dark)] w-screen"></div>
+                    <Sections menu={menu} catalog={catalog} events={events} about={about} />
                 </div>
                 <Hero expanded={expanded} />
             </section>
