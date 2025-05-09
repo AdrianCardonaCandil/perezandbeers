@@ -20,17 +20,17 @@ const About = ({ logo, information, sectionName, timetable }) => {
                 <div className="flex flex-col gap-12.5 md:flex-2">
                     <h1
                         style={{ fontFamily: "'Dancing Script'" }}
-                        className="text-6xl font-extrabold"
+                        className="text-6xl font-extrabold about-fade-in"
                     >
                         {logo}
                     </h1>
                     <h2
                         style={{ fontFamily: "'Dancing Script'" }}
-                        className="text-2xl tracking-wide italic"
+                        className="text-2xl tracking-wide italic about-fade-in"
                     >
                         {information.title}
                     </h2>
-                    <p className="leading-8 font-light">{information.text}</p>
+                    <p className="leading-8 font-light about-fade-in">{information.text}</p>
                 </div>
                 <div className="self-end md:flex-1">
                     <img src={hops} alt="Beer hops art image" />

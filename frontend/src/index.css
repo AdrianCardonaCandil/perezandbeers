@@ -167,4 +167,10 @@
         animation-range: cover 25% contain 35%;
         view-timeline-inset: 30%;
     }
+    .about-fade-in {
+        animation: content-fade-in linear both;
+        animation-timeline: view();
+        animation-range: cover 25% contain 35%;
+        view-timeline-inset: 30%;
+    }
 }
