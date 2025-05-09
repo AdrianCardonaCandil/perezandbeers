@@ -22,13 +22,13 @@ const Front = ({ logo, message, label }) => {
                 >
                     {logo}
                 </h1>
-                <p className="front-fade-in text-xs font-light">{message}</p>
+                <p className="front-fade-in font-light">{message}</p>
                 <img
                     className="fade-in hidden md:block"
                     src={divider}
                     alt="section divider"
                 ></img>
-                <button className="front-fade-in px-7.5 py-2 text-sm text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
+                <button className="front-fade-in px-7.5 py-2 text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
                     {label}
                 </button>
             </div>

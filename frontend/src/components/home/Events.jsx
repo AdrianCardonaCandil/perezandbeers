@@ -56,7 +56,7 @@ const ImageSwiper = () => {
 
 const Events = ({ sectionName, information, sectionButton }) => {
     return (
-        <div className="mt-15 flex min-h-screen flex-col justify-between">
+        <div className="mt-15 flex flex-col justify-between">
             <SectionHeader
                 sectionName={sectionName}
                 information={information}

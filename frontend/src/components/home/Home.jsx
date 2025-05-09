@@ -108,11 +108,30 @@ const about = {
     logo: "Lorem ipsum",
     information: {
         title: "Lorem ipsum",
-        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
-          sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
-          imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+        text: `Integer dictum vel tellus ac congue. Aliquam iaculis ex bibendum lacinia malesuada. Nulla rutrum,
+        eros at ornare condimentum, nisi massa accumsan nisl, ac suscipit mauris turpis eget nulla. Fusce efficitur,
+        felis nec fringilla consectetur, metus erat malesuada velit, sed finibus massa eros sodales odio. In semper
+        mauris nec neque congue, sed suscipit tellus volutpat. Nam sodales nisi a turpis vestibulum, eu rutrum odio
+        mattis. Phasellus tortor turpis, auctor condimentum cursus sed, congue eget magna. Morbi eget nunc fringilla
+        magna rhoncus hendrerit ac vel orci. Phasellus fringilla, felis ut rhoncus vehicula, risus urna varius lectus,
+        quis mattis lacus est nec lacus. Integer dictum nunc quis nunc facilisis congue at ut purus. Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit.`,
     },
-    timetable: ""
+    sectionName: "Lorem ipsum",
+    timetable: [
+        {
+            days: "Lorem - Ipsum",
+            hours: "10:00 - 22:00",
+        },
+        {
+            days: "Lorem - Ipsum",
+            hours: "10:00 - 22:00",
+        },
+        {
+            days: "Lorem - Ipsum",
+            hours: "10:00 - 22:00",
+        }
+    ]
 };
 
 /**
@@ -140,11 +159,7 @@ const useIntersectionExpand = (targetId, threshold = 0.01) => {
             { threshold: threshold },
         );
         const target = document.getElementById(targetId);
-        if (target) {
-            console.log("Target found");
-            observer.observe(target);
-        }
-
+        if (target) observer.observe(target);
         return () => {
             if (target) observer.unobserve(target);
         };

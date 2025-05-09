@@ -36,7 +36,7 @@ const Sections = ({ menu, catalog, events, about }) => {
                     sectionButton={events.sectionButton}
                 />
             </div>
-            <About logo={about.logo} information={about.information} timetable={about.timetable} />
+            <About logo={about.logo} information={about.information} sectionName={about.sectionName} timetable={about.timetable} />
         </div>
     );
 };

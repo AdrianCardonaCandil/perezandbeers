@@ -55,7 +55,7 @@ const Recommendations = ({ categories }) => {
                     <button
                         key={category.id}
                         onClick={() => handleCategoryChange(category.id)}
-                        className="text-xs font-thin transition duration-300 hover:scale-110 hover:text-[var(--primary-light)] md:text-sm dark:hover:text-[var(--primary-dark)]"
+                        className="font-thin transition duration-300 hover:scale-110 hover:text-[var(--primary-light)] dark:hover:text-[var(--primary-dark)]"
                     >
                         {category.name}
                     </button>
