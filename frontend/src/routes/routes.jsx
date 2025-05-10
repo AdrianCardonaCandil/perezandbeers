@@ -1,5 +1,4 @@
 import Home from "../components/home/Home";
-import Navigation from "../components/navigation/Navigation";
 
 /**
  * @file routes.jsx
@@ -11,7 +10,7 @@ const routes = [
     {
         name: "Home",
         path: "/",
-        element: <Navigation />,
+        element: <Home />,
     },
 ];
 

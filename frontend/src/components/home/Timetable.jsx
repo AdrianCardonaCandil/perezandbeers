@@ -24,7 +24,10 @@ const Timetable = ({ sectionName, timetable }) => {
                 {timetable.map((entrie) => (
                     <div className="flex flex-col gap-5 md:gap-10">
                         <div className="flex items-center justify-between">
-                            <p className="text-2xl" style={{ fontFamily: "'Dancing Script'" }}>
+                            <p
+                                className="text-2xl"
+                                style={{ fontFamily: "'Dancing Script'" }}
+                            >
                                 {entrie.days}
                             </p>
                             <p className="font-thin">{entrie.hours}</p>
