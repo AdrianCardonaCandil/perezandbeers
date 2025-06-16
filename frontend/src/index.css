@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+    /* Color scheme light */
+    --primary-light: #333751;
+    --on-primary-light: #ffffff;
+    --secondary-light: #705954;
+    --on-secondary-light: #ffffff;
+    --tertiary-light: #4b3144;
+    --on-tertiary-light: #ffffff;
+    --primary-container-light: #4a4e69;
+    --on-primary-container-light: #bdc0e0;
+    --secondary-container-light: #c9ada7;
+    --on-secondary-container-light: #55403c;
+    --tertiary-container-light: #64475b;
+    --on-tertiary-container-light: #ddb8cf;
+    --error-light: #ba1a1a;
+    --on-error-light: #ffffff;
+    --error-container-light: #ffdad6;
+    --on-error-container-light: #93000a;
+    --surface-dim-light: #dcd9dc;
+    --surface-light: #fcf8fb;
+    --surface-bright-light: #fcf8fb;
+    --surface-container-lowest-light: #ffffff;
+    --surface-container-low-light: #f6f3f5;
+    --surface-container-light: #f0edef;
+    --surface-container-high-light: #eae7ea;
+    --surface-container-highest-light: #e5e1e4;
+    --on-surface-light: #1c1b1d;
+    --on-surface-variant-light: #46464d;
+    --outline-light: #77767e;
+    --outline-variant-light: #c7c5ce;
+    --inverse-surface-light: #313032;
+    --inverse-on-surface-light: #f3f0f2;
+    --inverse-primary-light: #c1c4e5;
+    --scrim-light: #000000;
+    --shadow-light: #000000;
+
+    /* Color scheme dark */
+    --primary-dark: #c1c4e5;
+    --on-primary-dark: #2b2f48;
+    --secondary-dark: #e6c8c2;
+    --on-secondary-dark: #3e2c28;
+    --tertiary-dark: #e2bcd4;
+    --on-tertiary-dark: #42283b;
+    --primary-container-dark: #4a4e69;
+    --on-primary-container-dark: #bdc0e0;
+    --secondary-container-dark: #c9ada7;
+    --on-secondary-container-dark: #55403c;
+    --tertiary-container-dark: #64475b;
+    --on-tertiary-container-dark: #ddb8cf;
+    --error-dark: #ffb4ab;
+    --on-error-dark: #690005;
+    --error-container-dark: #93000a;
+    --on-error-container-dark: #ffdad6;
+    --surface-dim-dark: #131315;
+    --surface-dark: #131315;
+    --surface-bright-dark: #39393b;
+    --surface-container-lowest-dark: #0e0e10;
+    --surface-container-low-dark: #1c1b1d;
+    --surface-container-dark: #201f21;
+    --surface-container-high-dark: #2a2a2c;
+    --surface-container-highest-dark: #353437;
+    --on-surface-dark: #e5e1e4;
+    --on-surface-variant-dark: #c7c5ce;
+    --outline-dark: #919098;
+    --outline-variant-dark: #46464d;
+    --inverse-surface-dark: #e5e1e4;
+    --inverse-on-surface-dark: #313032;
+    --inverse-primary-dark: #595d78;
+    --scrim-dark: #000000;
+    --shadow-dark: #000000;
+}
