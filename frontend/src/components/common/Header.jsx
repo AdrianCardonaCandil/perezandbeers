@@ -13,20 +13,18 @@ import { HiBars2 } from "react-icons/hi2";
  */
 
 const Header = ({ header }) => {
-    return (
-        <header>
-            <div className="fixed z-500 top-0 right-0 h-full p-7.5">
-                <div className="flex flex-col items-center text-xs">
-                    <label htmlFor="menu-toggle">
-                        {header.label}
-                    </label>
-                    <button name="menu-toggle">
-                        <HiBars2 className="size-10" />
-                    </button>
-                </div>
-            </div>
-        </header>
-    )
-}
+  return (
+    <header>
+      <div className="fixed top-0 right-0 z-500 h-full p-7.5">
+        <div className="flex flex-col items-center text-xs">
+          <label htmlFor="menu-toggle">{header.label}</label>
+          <button name="menu-toggle">
+            <HiBars2 className="size-10" />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

@@ -10,8 +10,8 @@ import routes from "./routes/routes";
 
 // Mock data for the header component
 const header = {
-  label: "menu"
-}
+  label: "menu",
+};
 
 /**
  * @function Layout
@@ -21,20 +21,16 @@ const header = {
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-[var(--surface-light)] dark:bg-[var(--surface-dark)] text-[var(--on-surface-light)] dark:text-[var(--on-surface-dark)] text-sm md:text-base lg:text-lg">
+    <div className="min-h-screen bg-[var(--surface-light)] font-['Raleway'] text-sm leading-8 text-[var(--on-surface-light)] md:text-base lg:text-lg dark:bg-[var(--surface-dark)] dark:text-[var(--on-surface-dark)]">
       <Header header={header} />
       <Routes>
         {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={route.element}
-          />
+          <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
     </div>
-  )
-}
+  );
+};
 
 /**
  * @function App
@@ -47,7 +43,7 @@ const App = () => {
     <BrowserRouter>
       <Layout />
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default App;
