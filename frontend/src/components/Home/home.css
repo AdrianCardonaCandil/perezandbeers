@@ -1,0 +1,17 @@
+/* Animate marquee scroll animation */
+@keyframes animate-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: animate-marquee 30s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: animate-marquee 30s linear infinite reverse;
+}

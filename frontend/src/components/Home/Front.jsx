@@ -1,5 +1,3 @@
-import divider from "../../assets/divider.svg";
-
 /**
  * @file Front.jsx
  * @description Presents primary information like restuarant name, mission, etc.

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import image from "../../assets/image.jpg";
+import images from "../../assets/images/export.js";
 import Front from "./Front";
 import Menu from "./Menu";
+import Catalog from "./Catalog.jsx";
+import Events from "./Events.jsx";
+import About from "./About.jsx";
 
 /**
  * @file Home.jsx
@@ -19,14 +22,136 @@ const front = {
 
 // Mock information for the Menu component
 const menu = {
-    sectionName: "Lorem ipsum",
-    information: {
-        title: "Lorem ipsum",
-        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+  sectionName: "Lorem ipsum",
+  information: {
+    title: "Lorem ipsum",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
           sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
           imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+  },
+  sectionButton: "Lorem ipsum dolor sit amet",
+};
+
+// Mock information for the Catalog component
+const catalog = {
+  sectionName: "Lorem ipsum",
+  information: {
+    title: "Lorem ipsum",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+              sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+              imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+  },
+  sectionButton: "Lorem ipsum dolor sit amet",
+  categories: [
+    {
+      id: 0,
+      name: "Lorem ipsum",
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc
+              vestibulum sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies.
+              Mauris imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+      beers: [
+        {
+          name: "Ipsum",
+          id: 1,
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc
+                      vestibulum sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies.
+                      Mauris imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+          brand: "Lorem ipsum",
+          alcoholContent: "Lorem ipsum",
+          country: "Lorem ipsum",
+        },
+        {
+          name: "Dolor",
+          id: 2,
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc
+                      vestibulum sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies.
+                      Mauris imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+          brand: "Lorem ipsum",
+          alcoholContent: "Lorem ipsum",
+          country: "Lorem ipsum",
+        },
+      ],
+      image: images[0],
     },
-    sectionButton: "Lorem ipsum dolor sit amet",
+    {
+      id: 1,
+      name: "Lorem ipsum",
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc
+              vestibulum sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies.
+              Mauris imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+      beers: [
+        {
+          name: "Lorem",
+          id: 3,
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc
+                      vestibulum sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies.
+                      Mauris imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+          brand: "Lorem ipsum",
+          alcoholContent: "Lorem ipsum",
+          country: "Lorem ipsum",
+        },
+      ],
+      image: images[1],
+    },
+  ],
+};
+
+// Mock information for the events section
+const events = {
+  sectionName: "Lorem ipsum",
+  information: {
+    title: "Lorem ipsum",
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+          sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+          imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
+  },
+  sectionButton: "Lorem ipsum dolor sit amet",
+};
+
+// Mock information for the about section
+const about = {
+  logo: "Perez & Beers",
+  information: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum nibh sit amet vehicula
+  facilisis. Aliquam tempus eros maximus sapien ullamcorper, quis luctus ex volutpat. Vivamus ut porta lorem. Donec
+  ultrices, eros ac aliquam scelerisque, libero lorem pretium ipsum, ac tristique mauris libero in turpis. Proin
+  lectus sapien, elementum varius ante eu, condimentum iaculis felis. Fusce dignissim feugiat turpis, vel faucibus
+  lacus. Nunc eget sollicitudin nibh, id euismod mi. Nam id nisi sit amet mi sagittis ultricies et in risus. Etiam
+  pulvinar rutrum leo a aliquet. Donec tristique diam lacus, et vulputate orci tempus eget. Donec volutpat libero
+  eget consectetur tempor.`,
+  share: "Lorem ipsum dolor",
+  timetable: {
+    name: "Lorem ipsum",
+    entries: [
+      {
+        day: "Monday",
+        hours: "10:00 - 22:00",
+      },
+      {
+        day: "Tuesday",
+        hours: "10:00 - 22:00",
+      },
+      {
+        day: "Wednesday",
+        hours: "10:00 - 22:00",
+      },
+      {
+        day: "Thursday",
+        hours: "10:00 - 22:00",
+      },
+      {
+        day: "Friday",
+        hours: "10:00 - 22:00",
+      },
+      {
+        day: "Saturday",
+        hours: "10:00 - 22:00",
+      },
+      {
+        day: "Sunday",
+        hours: "10:00 - 22:00",
+      },
+    ],
+  },
 };
 
 /**
@@ -37,8 +162,10 @@ const menu = {
 
 const Hero = ({ isIntersecting }) => {
   return (
-    <div className={`top-0 h-screen ${isIntersecting ? "flex-2" : "flex-4"} transition-[flex] duration-1300 ease-in md:sticky`}>
-      <img className="h-full w-full object-cover" src={image}></img>
+    <div
+      className={`top-0 h-screen ${isIntersecting ? "flex-2" : "flex-4"} transition-[flex] duration-1300 ease-in md:sticky`}
+    >
+      <img className="h-full w-full object-cover" src={images[4].path}></img>
     </div>
   );
 };
@@ -51,10 +178,15 @@ const Hero = ({ isIntersecting }) => {
 
 const MainSections = ({ isIntersecting }) => {
   return (
-    <div className={`z-250 min-w-0 ${isIntersecting ? "flex-4" : "flex-2"} transition-[flex] duration-1300 ease-in`}>
+    <div
+      className={`z-250 min-w-0 ${isIntersecting ? "flex-4" : "flex-2"} transition-[flex] duration-1300 ease-in`}
+    >
       <Front front={front} />
       <div id="expanded">
-        <Menu sectionName={menu.sectionName} information={menu.information} sectionButton={menu.sectionButton} />
+        <Menu menu={menu} />
+        <Catalog catalog={catalog} />
+        <Events events={events} />
+        <About about={about} />
       </div>
     </div>
   );

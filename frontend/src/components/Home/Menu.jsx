@@ -1,5 +1,7 @@
 import SectionHeader from "./SectionHeader";
-import images from "../../assets/images/export"
+import images from "../../assets/images/export";
+import "./home.css";
+import SectionFooter from "./SectionFooter";
 
 /**
  * @file Menu.jsx
@@ -14,26 +16,25 @@ import images from "../../assets/images/export"
  */
 
 const AnimatedMarquee = ({ direction, imageSize }) => {
-    console.log(direction, imageSize);
   return (
     <div className={`relative ${imageSize} overflow-hidden`}>
-      <div className={`absolute flex h-full w-max gap-7.5`}>
-        {images.map(image => 
-            <img
-                key={image.id}
-                src={image.path}
-                alt={image.alt}
-                className="object-cover" 
-            />
-        )}
-        {images.map(image => 
-            <img
-                key={image.id}
-                src={image.path}
-                alt={image.alt}
-                className="object-cover"
-            />
-        )}
+      <div className={`absolute ${direction} flex h-full w-max gap-7.5`}>
+        {images.map((image) => (
+          <img
+            key={image.id}
+            src={image.path}
+            alt={image.alt}
+            className="object-cover"
+          />
+        ))}
+        {images.map((image) => (
+          <img
+            key={image.id}
+            src={image.path}
+            alt={image.alt}
+            className="object-cover"
+          />
+        ))}
       </div>
     </div>
   );
@@ -45,17 +46,24 @@ const AnimatedMarquee = ({ direction, imageSize }) => {
  * @returns {JSX.Element} The menu component.
  */
 
-const Menu = ({ sectionName, information, sectionButton }) => {
+const Menu = ({ menu }) => {
   return (
-    <section className="md:my-50 my-25 flex flex-col justify-between gap-20">
-      <SectionHeader sectionName={sectionName} information={information} />
-      <div className="flex flex-col gap-15 px-12.5">
-        <AnimatedMarquee direction="animate-marquee-left" imageSize="h-75 md:h-100" />
-        <AnimatedMarquee direction="animate-marquee-right" imageSize="h-25 md:h-50" />
+    <section className="my-25 flex flex-col justify-between gap-20 md:my-50">
+      <SectionHeader
+        sectionName={menu.sectionName}
+        information={menu.information}
+      />
+      <div className="flex flex-col gap-15 px-7.5 md:px-12.5">
+        <AnimatedMarquee
+          direction="animate-marquee-left"
+          imageSize="h-50 md:h-100"
+        />
+        <AnimatedMarquee
+          direction="animate-marquee-right"
+          imageSize="h-30 md:h-50"
+        />
       </div>
-      <div className="grid place-content-center bg-[var(--surface-container-light)] p-15 text-[var(--on-tertiary-container-light)] underline underline-offset-5 dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-tertiary-container-dark)]">
-        <button>{sectionButton}</button>
-      </div>
+      <SectionFooter sectionButton={menu.sectionButton} />
     </section>
   );
 };
