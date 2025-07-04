@@ -196,7 +196,7 @@ const Home = () => {
   const isIntersecting = useIntersectionObserver("expanded");
   return (
     <main>
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col-reverse md:flex-row w-screen">
         <MainSections isIntersecting={isIntersecting} />
         <Hero isIntersecting={isIntersecting} />
       </div>

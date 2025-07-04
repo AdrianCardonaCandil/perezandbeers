@@ -24,7 +24,7 @@ const Timetable = ({ timetable }) => {
             key={entrie.day}
             className="flex justify-between p-5 font-light transition duration-300 hover:bg-[var(--surface-container-light)] dark:hover:bg-[var(--surface-container-dark)]"
           >
-            <p>{entrie.day}</p>
+            <p className="font-bold">{entrie.day}</p>
             <p>{entrie.hours}</p>
           </div>
         ))}

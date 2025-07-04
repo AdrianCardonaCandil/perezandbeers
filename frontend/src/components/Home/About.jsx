@@ -18,7 +18,7 @@ import { FaTripadvisor } from "react-icons/fa";
 const About = ({ about }) => {
   let icons = [<FaInstagram />, <FaXTwitter />, <FaTripadvisor />];
   return (
-    <section className="absolute right-0 left-0 bg-[var(--surface-light)] dark:bg-[var(--surface-dark)]">
+    <section className="w-screen bg-[var(--surface-light)] dark:bg-[var(--surface-dark)]">
       <div className="flex flex-col md:flex-row">
         <div className="flex-5">
           <div className="flex flex-col gap-25 px-15 py-35 md:px-25 lg:px-35">
