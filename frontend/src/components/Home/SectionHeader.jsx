@@ -12,9 +12,9 @@
 
 const SectionHeader = ({ sectionName, information }) => {
   return (
-    <div className="content-fade-in px-7.5 md:px-12.5">
+    <div className="fade-motion-in px-7.5 md:px-12.5">
       <div className="mb-15">
-        <button className="px-5 py-1 font-['Bitter'] font-bold text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
+        <button className="px-5 py-1 font-bold text-[var(--primary-light)] inset-ring-2 inset-ring-[var(--primary-light)] dark:text-[var(--primary-dark)] dark:inset-ring-[var(--primary-dark)]">
           {sectionName}
         </button>
       </div>

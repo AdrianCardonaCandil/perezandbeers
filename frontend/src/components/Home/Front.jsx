@@ -12,7 +12,7 @@
 
 const Front = ({ front }) => {
   return (
-    <section className="flex items-center justify-center px-15 py-15 md:h-screen">
+    <section className="flex items-center justify-center px-15 py-15 md:h-screen fade-out">
       <div className="flex flex-col items-start gap-10">
         <h1
           style={{ fontFamily: "'Dancing Script'" }}

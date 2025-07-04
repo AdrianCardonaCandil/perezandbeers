@@ -72,7 +72,7 @@
   --shadow-dark: #000000;
 }
 
-@keyframes fade-in-animation {
+@keyframes fade-motion-in {
   from {
     opacity: 0;
     transform: translateX(5%);
@@ -80,6 +80,15 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -93,10 +102,15 @@
 }
 
 @layer common {
-  .content-fade-in {
-    animation: fade-in-animation linear both;
+  .fade-motion-in {
+    animation: fade-motion-in linear both;
     animation-timeline: view();
     animation-range: cover 25% contain 35%;
+  }
+  .fade-out {
+    animation: fade-out linear both;
+    animation-timeline: scroll(root);
+    animation-range: 150px 450px;
   }
   .image-reveal {
     animation: image-reveal-animation 1.3s cubic-bezier(0.65, 0, 0.35, 1)
