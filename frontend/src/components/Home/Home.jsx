@@ -23,24 +23,18 @@ const front = {
 // Mock information for the Menu component
 const menu = {
   sectionName: "Lorem ipsum",
-  information: {
-    title: "Lorem ipsum",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
-          sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
-          imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
-  },
+  information: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+        sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+        imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
   sectionButton: "Lorem ipsum dolor sit amet",
 };
 
 // Mock information for the Catalog component
 const catalog = {
   sectionName: "Lorem ipsum",
-  information: {
-    title: "Lorem ipsum",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
-              sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
-              imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
-  },
+  information: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+            sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+            imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
   sectionButton: "Lorem ipsum dolor sit amet",
   categories: [
     {
@@ -99,12 +93,9 @@ const catalog = {
 // Mock information for the events section
 const events = {
   sectionName: "Lorem ipsum",
-  information: {
-    title: "Lorem ipsum",
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
-          sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
-          imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
-  },
+  information: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a leo non nunc vestibulum
+        sodales vitae nec erat. Suspendisse potenti. Nunc quis ligula a massa lobortis ultricies. Mauris
+        imperdiet quam malesuada nibh euismod, quis bibendum magna laoreet`,
   sectionButton: "Lorem ipsum dolor sit amet",
 };
 
@@ -163,9 +154,12 @@ const about = {
 const Hero = ({ isIntersecting }) => {
   return (
     <div
-      className={`top-0 h-screen ${isIntersecting ? "flex-2" : "flex-4"} transition-[flex] duration-1300 ease-in md:sticky`}
+      className={`top-0 h-screen overflow-hidden ${isIntersecting ? "flex-3" : "flex-5"} transition-[flex] duration-1300 ease-in md:sticky`}
     >
-      <img className="h-full w-full object-cover" src={images[4].path}></img>
+      <img
+        className="image-reveal h-full w-full object-cover"
+        src={images[4].path}
+      ></img>
     </div>
   );
 };
@@ -179,7 +173,7 @@ const Hero = ({ isIntersecting }) => {
 const MainSections = ({ isIntersecting }) => {
   return (
     <div
-      className={`z-250 min-w-0 ${isIntersecting ? "flex-4" : "flex-2"} transition-[flex] duration-1300 ease-in`}
+      className={`z-250 min-w-0 ${isIntersecting ? "flex-5" : "flex-3"} transition-[flex] duration-1300 ease-in`}
     >
       <Front front={front} />
       <div id="expanded">

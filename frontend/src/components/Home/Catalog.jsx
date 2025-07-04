@@ -16,11 +16,8 @@ import { useState } from "react";
 
 const Beer = ({ name, description, brand, alcoholContent, country }) => {
   return (
-    <article className="flex flex-col gap-5 px-5 py-12.5 transition duration-300 hover:bg-[var(--surface-container-light)] md:px-10 dark:hover:bg-[var(--surface-container-dark)]">
-      <h3
-        className="text-xl font-bold"
-        style={{ fontFamily: "'Dancing Script'" }}
-      >
+    <article className="content-fade-in flex flex-col gap-5 px-5 py-12.5 transition duration-300 hover:bg-[var(--surface-container-light)] md:px-10 dark:hover:bg-[var(--surface-container-dark)]">
+      <h3 className="font-['Bitter'] font-bold text-[var(--secondary-light)] dark:text-[var(--secondary-dark)]">
         {name}
       </h3>
       <p>{description}</p>
@@ -53,13 +50,14 @@ const Recommendations = ({ categories }) => {
           <button
             key={category.id}
             onClick={() => handleCategoryChange(category.id)}
-            className="transition duration-300 hover:scale-110 hover:text-[var(--primary-light)] dark:hover:text-[var(--primary-dark)]"
           >
-            {category.name}
+            <p className="transition duration-150 hover:scale-105 hover:font-bold hover:text-[var(--primary-ight)] dark:hover:text-[var(--primary-dark)]">
+              {category.name}
+            </p>
           </button>
         ))}
       </nav>
-      <div>
+      <div className="content-fade-in">
         <p>{categories[selectedCategory].description}</p>
       </div>
       <div className="my-10 h-50 md:h-75">

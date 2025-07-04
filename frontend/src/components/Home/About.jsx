@@ -20,7 +20,7 @@ const About = ({ about }) => {
   return (
     <section className="w-screen bg-[var(--surface-light)] dark:bg-[var(--surface-dark)]">
       <div className="flex flex-col md:flex-row">
-        <div className="flex-4">
+        <div className="flex-5">
           <div className="flex flex-col gap-25 px-15 py-35 md:px-25 lg:px-35">
             <div className="flex flex-col gap-20">
               <h2
@@ -39,7 +39,7 @@ const About = ({ about }) => {
             <Timetable timetable={about.timetable} />
           </div>
         </div>
-        <div className="sticky top-0 h-screen flex-2">
+        <div className="sticky top-0 h-screen flex-3">
           <img
             className="h-full w-full object-cover"
             src={images[1].path}

@@ -12,7 +12,7 @@
 
 const SectionFooter = ({ sectionButton }) => {
   return (
-    <div className="grid place-content-center bg-[var(--surface-container-light)] p-15 text-[var(--on-secondary-container-light)] underline underline-offset-5 transition-colors duration-1000 hover:bg-[var(--secondary-container-light)] dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-secondary-container-dark)] dark:hover:bg-[var(--secondary-container-dark)]">
+    <div className="grid place-content-center bg-[var(--surface-container-light)] p-15 text-[var(--on-tertiary-container-light)] underline underline-offset-5 transition-colors duration-1000 hover:bg-[var(--tertiary-container-light)] dark:bg-[var(--surface-container-dark)] dark:text-[var(--on-tertiary-container-dark)] dark:hover:bg-[var(--tertiary-container-dark)]">
       <button>{sectionButton}</button>
     </div>
   );
