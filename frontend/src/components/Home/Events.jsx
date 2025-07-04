@@ -59,7 +59,7 @@ const ImageSwiper = () => {
 
 const Events = ({ events }) => {
   return (
-    <section className="mt-25 flex flex-col justify-between gap-20 md:mt-50">
+    <section className="mt-25 flex flex-col justify-between gap-20">
       <SectionHeader
         sectionName={events.sectionName}
         information={events.information}

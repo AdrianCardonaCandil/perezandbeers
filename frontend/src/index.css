@@ -75,11 +75,11 @@
 @keyframes fade-motion-in {
   from {
     opacity: 0;
-    transform: translateX(5%);
+    transform: translateY(15%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -102,16 +102,22 @@
 }
 
 @layer common {
-  .fade-motion-in {
-    animation: fade-motion-in linear both;
-    animation-timeline: view();
-    animation-range: cover 25% contain 35%;
+  @supports (animation-timeline: view()) {
+    .fade-motion-in {
+      animation: fade-motion-in linear both;
+      animation-timeline: view();
+      animation-range: cover 25% contain 35%;
+    }
   }
-  .fade-out {
-    animation: fade-out linear both;
-    animation-timeline: scroll(root);
-    animation-range: 150px 450px;
+
+  @supports (animation-timeline: scroll(root)) {
+    .fade-out {
+      animation: fade-out linear both;
+      animation-timeline: scroll(root);
+      animation-range: 150px 450px;
+    }
   }
+  
   .image-reveal {
     animation: image-reveal-animation 1.3s cubic-bezier(0.65, 0, 0.35, 1)
       forwards;

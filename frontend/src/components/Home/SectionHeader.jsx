@@ -19,7 +19,7 @@ const SectionHeader = ({ sectionName, information }) => {
         </button>
       </div>
       <div>
-        <p className="font-light">{information}</p>
+        <p>{information}</p>
       </div>
     </div>
   );

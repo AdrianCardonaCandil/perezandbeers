@@ -45,13 +45,13 @@ const Recommendations = ({ categories }) => {
   };
   return (
     <div className="flex flex-col gap-10 px-7.5 md:px-12.5">
-      <nav className="flex justify-evenly border-b-1 border-[var(--primary-light)] pb-2 dark:border-[var(--primary-dark)]">
+      <nav className="flex justify-evenly border-b-1 border-[var(--secondary-light)] pb-2 dark:border-[var(--secondary-dark)]">
         {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => handleCategoryChange(category.id)}
           >
-            <p className="transition duration-150 hover:scale-105 hover:font-bold hover:text-[var(--primary-ight)] dark:hover:text-[var(--primary-dark)]">
+            <p className="transition duration-150 hover:scale-105 hover:font-bold hover:text-[var(--secondary-light)] dark:hover:text-[var(--secondary-dark)]">
               {category.name}
             </p>
           </button>
@@ -91,7 +91,7 @@ const Recommendations = ({ categories }) => {
 
 const Catalog = ({ catalog }) => {
   return (
-    <section className="my-25 flex flex-col justify-between gap-20 md:my-50">
+    <section className="my-25 flex flex-col justify-between gap-20">
       <SectionHeader
         sectionName={catalog.sectionName}
         information={catalog.information}
