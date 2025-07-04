@@ -1,3 +1,4 @@
+import Blog from "../components/Blog/Blog";
 import Home from "../components/Home/Home";
 
 /**
@@ -11,6 +12,11 @@ const routes = [
     name: "Home",
     path: "/",
     element: <Home />,
+  },
+  {
+    name: "Blog",
+    path: "/blog",
+    element: <Blog />,
   },
 ];
 

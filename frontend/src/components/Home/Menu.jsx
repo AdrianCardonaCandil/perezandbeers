@@ -48,7 +48,7 @@ const AnimatedMarquee = ({ direction, imageSize }) => {
 
 const Menu = ({ menu }) => {
   return (
-    <section className="mt-25 md:mt-50 flex flex-col justify-between gap-20">
+    <section className="mt-25 flex flex-col justify-between gap-20 md:mt-50">
       <SectionHeader
         sectionName={menu.sectionName}
         information={menu.information}

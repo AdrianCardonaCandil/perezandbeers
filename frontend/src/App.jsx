@@ -21,7 +21,7 @@ const header = {
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-[var(--surface-light)] font-['Raleway'] text-sm text-justify leading-8 text-[var(--on-surface-light)] md:text-base lg:text-lg dark:bg-[var(--surface-dark)] dark:text-[var(--on-surface-dark)]">
+    <div className="min-h-screen bg-[var(--surface-light)] text-justify font-['Raleway'] text-sm leading-8 text-[var(--on-surface-light)] md:text-base lg:text-lg dark:bg-[var(--surface-dark)] dark:text-[var(--on-surface-dark)]">
       <Header header={header} />
       <Routes>
         {routes.map((route, index) => (
