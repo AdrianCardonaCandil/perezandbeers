@@ -216,8 +216,11 @@ const useIntersectionObserver = (targetId, threshold = 0.01) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const { top } = entry.boundingClientRect;
           if (entry.isIntersecting) setIsIntersecting(true);
-          else setIsIntersecting(false);
+          else {
+            if (top > 0) setIsIntersecting(false);
+          }
         });
       },
       { threshold: threshold },
